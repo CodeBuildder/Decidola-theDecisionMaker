@@ -1,2 +1,5 @@
-import './utils.js'
-console.log('app.js is running!')
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Decidola from './components/Decidola'
+
+ReactDOM.render(<Decidola />, document.getElementById('app'))
