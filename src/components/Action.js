@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Action = (props) => {
-    return(
+const Action = (props) => (
+    
         <div>
         <button 
             onClick={props.randPick}
@@ -10,7 +10,7 @@ const Action = (props) => {
         Ask me what to do?
         </button>
         </div>
-    )
-}
+    
+)
 
 export default Action

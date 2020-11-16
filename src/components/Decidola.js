@@ -3,24 +3,34 @@ import AddOptions from './AddOptions'
 import Action from './Action'
 import Header from './Header'
 import Options from './Options'
+import OptionModal from './OptionModal'
+
 
 export default class Decidola extends React.Component{
     state = {
-        options:[]
+        options:[],
+        selectedOption: undefined
     }
     randPick= () => {
         this.setState(() => {
             
                 const randNum = Math.floor(Math.random() * this.state.options.length);
                 const option = this.state.options[randNum]
-                alert(option)  
-                 
+                this.setState(() => ({
+                    selectedOption:option
+                }))             
         })
     }
+
+    clearSelectedOption = () => {
+        this.setState(() => ({
+            selectedOption: undefined
+        }))
+    }
+
     onRemoveAll= () => {
         this.setState(() => ({
-        
-            options: []    
+            options: []
         }))
     }
 
@@ -100,6 +110,10 @@ export default class Decidola extends React.Component{
                 />
                 <AddOptions
                     addOption = {this.addOption}
+                />
+                <OptionModal 
+                    selectedOption = {this.state.selectedOption}
+                    clearSelectedOption={this.clearSelectedOption}
                 />
             </div>
         )
