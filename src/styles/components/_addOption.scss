@@ -10,6 +10,7 @@
 .addOption{
     display: flex;
     padding:$m-size;
+    flex-direction: column;
     
 }
 
@@ -17,8 +18,18 @@
     background: $widgetBlue;
     border: none;
     border-bottom: .3rem solid darken($color: $widgetBlue, $amount: 5%);
-    flex-grow: 1;
-    margin-right: $smallButton;
     color: white;
-    padding: $smallButton;
+    flex-grow: 1;
+    // margin: 0 $smallButton;
+    // padding: $smallButton;
+}
+
+@media (min-width: 10rem) {
+   .addOption{
+       flex-direction: row;
+   }
+
+   .addOptionInput{
+       margin: 0 1.2rem 0 0;
+   }
 }
