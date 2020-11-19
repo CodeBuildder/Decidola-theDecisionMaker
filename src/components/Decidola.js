@@ -93,24 +93,28 @@ export default class Decidola extends React.Component{
 
     render(){
         const title = 'Decidola'
-        const subtitle = 'Hey, this is Decidola. Let me help you decide your tasks for you.'
+        const subtitle = 'Hey, this is Decidola. Let me help decide your tasks for you.'
         
 
         return(
             <div>
                 <Header subtitle={subtitle}/>
-                <Action 
-                    optionCheck={this.state.options.length > 0}
-                    randPick = {this.randPick}
-                />
-                <Options 
-                    options={this.state.options}
-                    onRemoveAll ={this.onRemoveAll}
-                    onRemoveOption = {this.onRemoveOption}
-                />
-                <AddOptions
-                    addOption = {this.addOption}
-                />
+                <div className="container">   
+                    <Action 
+                        optionCheck={this.state.options.length > 0}
+                        randPick = {this.randPick}
+                    /> 
+                    <div className="widget">
+                        <Options 
+                            options={this.state.options}
+                            onRemoveAll ={this.onRemoveAll}
+                            onRemoveOption = {this.onRemoveOption}
+                        />
+                        <AddOptions
+                            addOption = {this.addOption}
+                        />
+                    </div>
+                </div>
                 <OptionModal 
                     selectedOption = {this.state.selectedOption}
                     clearSelectedOption={this.clearSelectedOption}

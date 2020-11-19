@@ -1,0 +1,41 @@
+.bigButton{
+
+    border: none;
+    border-bottom: 0.6rem solid darken($color: $mainButton, $amount: 20%);
+    background: $mainButton;
+    border-radius: 0 20px 0 20px;
+    color: white;
+    font-weight: bold;
+    font-size: $l-size;
+    margin-bottom: $xl-size;
+    padding: 2.4rem;
+    width: 100%;
+    transition: 0.3s linear;
+}
+
+.bigButton:hover{
+    transform: scale(1.2);
+    border-radius: 20px 0 20px 0px;
+    
+}
+
+.bigButton:disabled{
+    opacity: 0.5;
+    transition: none;
+    transform: none;
+}
+
+.button{
+    border: none;
+    border-bottom: 0.3rem solid darken($color: $mainButton, $amount: 20%);
+    background: $mainButton;
+    color: white;
+    padding: $smallButton;
+}
+
+.button--link{
+    background: none;
+    border: none;
+    color: $off-white;
+    padding: 0;
+}

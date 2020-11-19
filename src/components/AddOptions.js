@@ -25,10 +25,10 @@ export default class AddOptions extends React.Component {
         
         return(
             <div>
-            {this.state.error && <p>{this.state.error}</p>}
-            <form onSubmit = {this.addOption}>
-            <input type="text" name = "option" />
-            <button >Add Task</button>
+            {this.state.error && <p className="errorMessage">{this.state.error}</p>}
+            <form className="addOption" onSubmit = {this.addOption}>
+            <input className="addOptionInput" type="text" name = "option" />
+            <button className="button">Add Task</button>
             </form>
             </div>
         )
