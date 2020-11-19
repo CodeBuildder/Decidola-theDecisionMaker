@@ -3,11 +3,13 @@
     justify-content: space-between;
     padding: $l-size $m-size;
     border-bottom: 2px solid lighten($color: $widgetBlue, $amount: 10%);
+    transition: opacity 3s ease-out;
 }
 
 .optionText{
     color:#C7D1F8;
     font-weight: 500;
     font-size: 2rem;
-    margin: 0;
+    margin: 0 $smallButton;
+    word-break: break-all;
 }
